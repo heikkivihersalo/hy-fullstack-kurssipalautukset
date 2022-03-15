@@ -1,0 +1,29 @@
+title Uusi muistiinpano
+
+note over Selain
+Selain lähettää kommentin sisällön palvelimelle. Pyydetään myös sivun sisältö
+end note
+
+Selain->Palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+Selain->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+
+note over Palvelin
+Palvelin palauttaa HTML -koodin
+end note
+
+Palvelin->Selain: HTML-Koodi
+
+note over Selain
+Pyydetään sovelluksen sisältö ja data
+end note
+
+Selain->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Palvelin->Selain: main.js
+Selain->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Palvelin->Selain: data.json
+
+note over Selain
+Pyydetään muut resurssit
+end note
+Selain->Palvelin: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+Palvelin->Selain: favicon.ico

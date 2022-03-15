@@ -1,0 +1,37 @@
+title Single Page App
+
+note over Selain
+Pyydetään sivun ja sovelluksen sisältö sekä tyylitiedosto
+end note
+
+Selain->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+
+note right of Palvelin
+Palautetaan HTML koodi
+end note
+Palvelin->Selain: HTML-Koodi
+Selain->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+
+note right of Palvelin
+Palautetaan tyylitiedosto
+end note
+Palvelin->Selain: main.css
+Selain->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+
+note right of Palvelin
+Palautetaan sovellus
+end note
+Palvelin->Selain: spa.js
+
+note over Selain
+Pyydetään sovelluksen data
+end note
+
+Selain->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Palvelin->Selain: data.json
+
+note over Selain
+Pyydetään muut resurssit
+end note
+Selain->Palvelin: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+Palvelin->Selain: favicon.ico

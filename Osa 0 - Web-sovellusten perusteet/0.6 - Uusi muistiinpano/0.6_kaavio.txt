@@ -1,0 +1,12 @@
+title Uusi muistiinpano
+
+note over Selain
+Selain lähettää muistiinpanon sisällön
+end note
+Selain->Palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over Palvelin
+Palvelin palauttaa selaimelle vastauksen onnistuneesta muistiinpanon lisäyksestä
+end note
+
+Palvelin->Selain: {"message":"note created"}
