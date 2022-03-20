@@ -14,12 +14,21 @@ const App = () => {
   const [selected, setSelected] = useState(0);
   const [votes, setVotes] = useState(new Array(anecdotes.length).fill(0));
 
-  const AnecdoteOfTheDay = () => (
-    <>
-      <h2>Anecdote of the day</h2>
-      <p>{anecdotes[selected]}</p>
-    </>
-  )
+  const AnecdoteOfTheDay = () => {
+    const getVotes = () => {
+      return votes[selected]
+    }
+
+    const totalVotes = getVotes();
+
+    return (
+      <>
+        <h2>Anecdote of the day</h2>
+        <p>{anecdotes[selected]}</p>
+        <p>Has {totalVotes} votes</p>
+      </>
+    )
+  }
 
   const Buttons = () => {
     const setRandomAnecdote = () => {
