@@ -53,6 +53,7 @@ const App = () => {
       <>
         <h2>Most voted anecdote</h2>
         <p>{arr[index]}</p>
+        <p>Has {maxVal} votes</p>
       </>
     );
   }
