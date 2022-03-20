@@ -1,0 +1,10 @@
+.app {
+  max-width: 50rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.app table {
+  text-align: left;
+  margin-inline: auto;
+}
